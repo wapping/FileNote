@@ -1,0 +1,7 @@
+- [x] Add notes to file.  
+- [x] Print notes of files.
+- [x] Print Noted files in the given directory
+- [x] Search noted files with given keyword.
+- [ ] Export data of noted files.
+- [ ] Add relationships between files.
+- [ ] Print Relationships about a given file.
