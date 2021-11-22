@@ -1,44 +1,66 @@
+English | [简体中文](./README_cn.md) 
+
 # Introduction
 
-- [x] Add notes to file.  
+This is a tool for managing file notes through the command line and has the following functions.
 
-- [x] Print notes of files.
-- [x] Print Noted files in the given directory
-- [x] Search noted files with given keyword.
-- [ ] Export data of noted files.
-- [ ] Add relationships between files.
-- [ ] Print Relationships about a given file.
+- [x] Add notes to files (folders).
+- [x]  files with notes.
+- [x] View files with added notes in the given directory.
+- [x] Search for files with notes based on the given keyword.
+- [x] Add relationships to files.
+- [x] View files related to a file.
+- [ ] Export all file notes data.
 
-# Requirements
-
-python>=3.6
+One limitation of this tool is that after a file is moved or renamed, it cannot be associated with its note.
 
 # Installation
-```
-git clone https://github.com/wapping/FileNote.git
-cd FileNote
-python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade build
-python3 -m build
-pip install dist/FileNote-0.0.1-py3-none-any.whl
-```
 
-Check if you have successfully install this tool, just enter `fnote` on the console.
+1. Install python 
 
-# How to use
+   Install python with a version greater than or equal to 3.6.
 
-1. Add note to a file
+2. Download and install this tool
 
-`fnote -a file note`
+   2.1 Download the repository
 
-like this
+    ```
+    git clone https://github.com/wapping/FileNote.git
+    cd FileNote
+    ```
 
-`fnote -a /Users/me/file.txt 'my file'`
+   2.2 Choose one of the following methods
 
-2. Print the note of a file
+    - Install from package
 
-`fnote -pf file`
+   ```
+   pip install dist/FileNote-0.0.1-py3-none-any.whl
+   ```
 
-like this
+    - Compile and install from source code
 
-`fnote -pf -k /Users/me/file.txt`
+   ```
+   python3 -m pip install --upgrade pip
+   python3 -m pip install --upgrade build
+   python3 -m build
+   pip install dist/FileNote-0.0.1-py3-none-any.whl
+   ```
+3. Test
+
+
+Check if you have successfully install this tool, just enter `fnote` in the terminal.
+
+# Quick start
+
+1. Add a note to a file
+
+`fnote -a /path/to/your/file note`
+
+`/path/to/your/file`：The path of the file you want to note, which can be a relative path.
+
+`note`：You note.
+
+2. View the note of a file
+`fnote -pf -k keyword`
+
+`keyword`：The keyword,  can be a keyword of a file path or a note.
